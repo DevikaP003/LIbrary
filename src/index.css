@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  --font-serif: "Lora", Georgia, "Times New Roman", Times, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-canvas: #F1F6F5;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #E7F1EF;
+  --color-border-hairline: #D2E2DF;
+  --color-ink: #0B2834;
+  --color-ink-muted: #436470;
+  --color-marine: #0E5A7A;
+  --color-marine-hover: #0A455E;
+  --color-forest: #157A56;
+  --color-forest-hover: #0F5E42;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button, a, input, select {
+    outline-color: var(--color-marine);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

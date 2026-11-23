@@ -1,0 +1,6 @@
+{
+  "name": "Athenaeum Library",
+  "description": "Minimalist library management system with live PostgreSQL circulation tracking, student directory, book catalog, and return status management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
